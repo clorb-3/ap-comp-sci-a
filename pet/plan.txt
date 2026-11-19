@@ -1,0 +1,17 @@
+
+_____________________
+|       info        |
+|___________________|
+_____________________
+|                   |
+|                   |
+|       pet         |
+|                   |
+|___________________|
+_____________________
+|     buttons       |
+|___________________|
+
+info shows: health, hunger, bordom, tirdness, cleanness
+buttons: feed, play, sleep, clean, travel, close app
+
