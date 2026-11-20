@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -64,19 +65,19 @@ public class windowRender extends Application {
   public void start(Stage primaryStage) {
     primaryStage.initStyle(StageStyle.TRANSPARENT);
 
-    Label health = new Label("[75]");
+    Label health = new Label("[75]");
     health.setStyle("-fx-text-fill: white;" +
         "-fx-font-size: 16px;");
-    Label hunger = new Label("[75󱐠]");
+    Label hunger = new Label("[75]󱐠");
     hunger.setStyle("-fx-text-fill: white;" +
         "-fx-font-size: 16px;");
-    Label thirst = new Label("[75󰖌]");
+    Label thirst = new Label("[75]󰖌");
     thirst.setStyle("-fx-text-fill: white;" +
         "-fx-font-size: 16px;");
-    Label boredom = new Label("[75]");
+    Label boredom = new Label("[75]");
     boredom.setStyle("-fx-text-fill: white;" +
         "-fx-font-size: 16px;");
-    Label exaustion = new Label("[75💤]");
+    Label exaustion = new Label("[75]💤");
     exaustion.setStyle("-fx-text-fill: white;" +
         "-fx-font-size: 16px;");
 
@@ -86,6 +87,8 @@ public class windowRender extends Application {
         "-fx-background-color: rgba(30, 30, 30, 1);" +
         "-fx-background-radius: 15;" +
         "-fx-padding: 10;");
+    petInfo.setMaxWidth(Region.USE_PREF_SIZE);
+    petInfo.setMaxHeight(Region.USE_PREF_SIZE);
 
     Label petImage = new Label("""
              |\\_/|
@@ -103,17 +106,17 @@ public class windowRender extends Application {
         "-fx-background-radius: 15;" +
         "-fx-padding: 10;");
 
-    Button foodWaterButton = new Button("󰉚");
+    Button foodWaterButton = new Button("🥫");
     foodWaterButton.setOnAction(e -> primaryStage.close());
-    Button playButton = new Button("󰔇");
+    Button playButton = new Button("🎾");
     playButton.setOnAction(e -> primaryStage.close());
-    Button sleepButton = new Button("󰢠");
+    Button sleepButton = new Button("⏾");
     sleepButton.setOnAction(e -> primaryStage.close());
-    Button cleanButton = new Button("");
+    Button cleanButton = new Button("🚿");
     cleanButton.setOnAction(e -> primaryStage.close());
-    Button travelButton = new Button("");
+    Button travelButton = new Button("🚗");
     travelButton.setOnAction(e -> primaryStage.close());
-    Button closeButton = new Button("");
+    Button closeButton = new Button("⨯");
     closeButton.setOnAction(e -> primaryStage.close());
 
     HBox actions = new HBox(15, foodWaterButton, playButton, sleepButton, cleanButton, travelButton, closeButton);
@@ -122,6 +125,8 @@ public class windowRender extends Application {
         "-fx-background-color: rgba(30, 30, 30, 1);" +
         "-fx-background-radius: 15;" +
         "-fx-padding: 10;");
+    actions.setMaxWidth(Region.USE_PREF_SIZE);
+    actions.setMaxHeight(Region.USE_PREF_SIZE);
 
     VBox root = new VBox(15, petInfo, petImage, actions);
     root.setAlignment(Pos.CENTER);
